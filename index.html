@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste de taches</title>
+    <!-- file css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <h1>Liste de taches à faire</h1>
+        <div class="container">
+            <time id="date"></time>
+            <time id="hour"></time>
+            <form>
+                <input type="text"  id="task" placeholder="Ecrire une tache" autocomplete="on">
+                <input type="image"  id="btn-add-task" src="images/icon-ajouter.svg" alt="icone-ajouter">
+            </form>
+            <ul id ="task-list">
+                <!-- Données javaScript-->
+            </ul>
+
+            <button class="btn-all-delete" id="btn-all-delete">Supprimer tout</button>
+        
+        </div>
+    </section>
+    <!-- javascript -->
+<script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>
+
+
