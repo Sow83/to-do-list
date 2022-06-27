@@ -25,6 +25,7 @@
 *::after{
     box-sizing: border-box;
 }
+
 body{
     font-family: "Roboto", sans-serif;
     background: rgb(241,245,248); 
@@ -32,26 +33,31 @@ body{
 }
 h1{
     font-family: "great_vibesregular", sans-serif;
-    margin-top: 200px;
     text-align: center;
-    font-size: 2.8rem;
+    font-size: 44.8px;
     color: #c59d5f;
 }
 /* 
- * 1. positionnement du bouton submit(btn-add-task)
- * 2. Pour centrer l'enfant de type inline, cad la balise time de la date, il faut center le parent
+ * 1. Pour centrer l'enfant de type inline, cad la balise time de la date, il faut center le parent
+ * on pourrait aussi mettre l'enfant de type block(display: block)
  */
 .container{
     max-width: 600px;
-    margin: 0 auto;
-    position: relative;/* [1] */
-    text-align: center; /* [2] */
+    margin: 50px auto;
+    text-align: center; /* [1] */
+}
+/* 
+ * 1. positionnement du bouton submit(btn-add-task)
+ */
+.form{
+    position: relative; /* [1] */
 }
 #date{
     color: hsl(210, 22%, 49%);
     font-size: 1.3em;
     width: 180px;
-    opacity: 0.5
+    opacity: 0.5;
+
 }
 #hour{
     color: hsl(210, 22%, 49%);
@@ -65,7 +71,7 @@ h1{
     max-width: 600px;
     width: 100%;
     height: 70px;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     color: black;
     border: 0;
     outline: 0;
@@ -79,7 +85,7 @@ h1{
 #btn-add-task{
     position: absolute;
     right: 2px;
-    top: 117px;
+    top: 11px;
     width: 48px;
     height: 48px;
     outline: 0; 
@@ -88,13 +94,13 @@ h1{
 }
 
 /*
- * 1. Active le curseur du bouton qui sert à ajouter une tache
+ * 1. la classe active est rajouté via javaScript 
+ * 2. Active le curseur du bouton qui sert à ajouter une tache
  */
-/* la classe active est rajouté via javaScript */
 
-#btn-add-task.active{
+#btn-add-task.active{ /* [1] */
     opacity: 1;
-    pointer-events: auto; /* [1] */
+    pointer-events: auto; /* [2] */
 }
 
 /* 
@@ -104,7 +110,7 @@ li{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     color: hsl(210, 22%, 49%);
     list-style: none;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     padding:  10px;
     margin-left: -39px;   
     background-color: rgb(255, 255, 255);
@@ -136,12 +142,11 @@ li:hover img{
     background-color: rgb(241,245,248);
     cursor: pointer;
     font-size: 16px;
-    box-shadow: -2px 3px 2px 2px rgba(0,0,0,.5);  
-    transition: all 0.4s ease;
+    border: 2px solid #c59d5f;
+    transition: all .4s linear;
 }
 .btn-all-delete:hover{
-    background-color: hsl(210, 22%, 49%); 
-    border: 2px solid #f5af19;
+    background-color: hsl(209, 11%, 46%); 
 }
 
 /* Media queries dès que le viewport est égal ou moins de 610px  */

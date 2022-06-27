@@ -4,30 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="To do list avec HTML CSS JAVASCRIPT">
     <title>Liste de taches</title>
+    
+    <!-- favicon -->
+    <!-- Couvre tous les navigateurs qui prennent en charge ".ico" -->
+    <link rel="shortcut icon" href="images/favicon-48x48.ico">
+    <!-- Couvre tous les navigateurs modernes -->
+    <link rel="icon" type="image/png" href="images/favicon-196x196.png">
+    <!-- iOS & autres appareils mobiles -->
+    <link rel="apple-touch-icon" href="images/favicon-touch-icon-iphone-180x180.png">
+    
     <!-- file css -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section>
-        <h1>Liste de taches à faire</h1>
-        <div class="container">
-            <time id="date"></time>
-            <time id="hour"></time>
-            <form>
+        <div class="container">           
+            <time id="hour"><!-- Données javaScript--></time>
+            <time id="date"><!-- Données javaScript--></time>
+            <h1>Liste de taches à faire</h1>
+            <form class="form">
                 <input type="text"  id="task" placeholder="Ecrire une tache" autocomplete="on">
-                <input type="image"  id="btn-add-task" src="images/icon-ajouter.svg" alt="icone-ajouter">
+                <input type="image"  id="btn-add-task" src="images/icon-ajouter.svg" alt="icone-ajouter">                
             </form>
             <ul id ="task-list">
                 <!-- Données javaScript-->
             </ul>
 
-            <button class="btn-all-delete" id="btn-all-delete">Supprimer tout</button>
+            <button class="btn-all-delete" id="btn-all-delete">Supprimer Tout</button>
         
         </div>
     </section>
     <!-- javascript -->
-<script type="text/javascript" src="main.js"></script>
+<script src="main.js"></script>
 
 </body>
 </html>
